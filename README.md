@@ -54,3 +54,32 @@
 ### Regresar al ultimo cambio
 - `git reset --hard`
 - `git checkout -- .`
+
+### Ramas
+-   Crear una rama
+    -   `git branch <nombre-rama>`
+-   Ir a una rama
+    -   `git checkout <nombre-rama>`
+-   Ver ramas
+    -   `git branch`
+-   Crear una rama e ir 
+    -   `git checkout -b <nombre-rama>`
+-   Unir rama - (Necesario estar en la rama que espera cambios)
+    -   `git merge <rama-a-unir>`
+-   Eliminar rama
+    -   `git branch -d <nombre-rama>`
+    -   `git branch -d <nombre-rama> -f` (Forzar)
+
+### Tag
+-   Hacer Tag
+    -   `git tag <nombre-tag>`
+-   Versión anotada
+    -   `git tag -a <<v1.00>> -m "<comentario>"`
+-   Hacer un tag de una versión anterior mediante un hash
+    -   `git tag -a <<v0.1.0>></v0.1.0> <hash> -m "<comentario>"`
+-   Eliminar Tag
+    -   `git tag -d <nombre-tag>`
+-   Ver tags
+    -   `git tag`
+-   Ver detalles de un tag
+    -   `git show <tag>`
