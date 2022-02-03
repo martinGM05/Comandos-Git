@@ -76,7 +76,7 @@
 -   Versión anotada
     -   `git tag -a <<v1.00>> -m "<comentario>"`
 -   Hacer un tag de una versión anterior mediante un hash
-    -   `git tag -a <<v0.1.0>></v0.1.0> <hash> -m "<comentario>"`
+    -   `git tag -a <<v0.1.0>> <hash> -m "<comentario>"`
 -   Eliminar Tag
     -   `git tag -d <nombre-tag>`
 -   Ver tags
