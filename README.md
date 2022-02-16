@@ -83,3 +83,20 @@
     -   `git tag`
 -   Ver detalles de un tag
     -   `git show <tag>`
+
+### Stash
+-   Crear un stash(Reserva)
+    -   ` git stash `
+    -   `  git stash save "Agregamos a Loki en villanos" ` (Con descripción)
+-   Recuperar el stash
+    -   ` git stash pop `
+-   Ver la lista de stash
+    -   ` git stash list `
+    -   ` git stash list --stat  ` (Con descripción)
+-   Recuperar un stash en específico
+    -   ` git stash apply "stash@{<numero>}" `
+-   Eliminar stash
+    -   ` git stash drop "stash@{<numero>}" `
+    -   ` git stash clear ` (Todos)
+-   Ver datos del stash
+    -   ` git stash show "stash@{<numero>}" `
