@@ -130,3 +130,12 @@
     -   ` git reset HEAD^ ` (Regresar al cambio anterior)
     -  Hacer los commits por separado con su respectivo nombre
     -   Para poder continuar (Juntar con la rama main) y salir del rebase interactivo ` git rebase --continue `
+
+### Subir tags a github
+-   ` git push --tags ` (Teniendo tags)
+
+### Actualizar repositorio con cambios
+-   ` git pull `
+
+### Actualizar referencias
+-   ` git fetch `
