@@ -43,6 +43,10 @@
 - Regresar un cambio eliminado
     - `git reset --hard <Hash a viajar>`(Posición del Hash sacado del historial - reflog)
 
+- Regresar un archivo a su ultima versión estando en el stage si haber hecho commit del cambio
+    - ` git checkout -- <Archivo> `
+    
+
 ### Cambiar el nombre de un archivo
 - `git mv <archivo.extension> <archivo.extension>`
 
@@ -100,3 +104,29 @@
     -   ` git stash clear ` (Todos)
 -   Ver datos del stash
     -   ` git stash show "stash@{<numero>}" `
+
+### Rebase
+-   Añadir la rama secundaria a la rama principal la cual ya tiene cambios
+    -   ` git rebase master ` (Estando en la rama secundaria)
+    -   ` git merge <rama-secundaria> ` (Estando en la rama principal)
+
+-   Squash (Unir commits)
+    -   `git rebase -i HEAD~4` (Donde HEAD es la primer posición y 4 los commits que desea editar)
+    - Se tiene que entender que la unión se hara de frente para atrás entonces si se pone wl squash en el head el head se unira con su antecesor. 
+    Para editar/insertar oprimir "A" e ir a la linea donde se encuentra el commit a editar, en este ejemplo se une con "squash" o "s" al principio en lugar de pick. Para salir es ":wq!", donde w es para guardar, q salir y ! inmediatamente.  
+    ![](./Images/Rebase-SQUASH.png)
+
+-   Reword (Cambiar el mensaje de los commits)
+    - `git rebase -i HEAD~4`
+    - Donde r hace referencia a reword 
+    ![](./Images/Reward.png) 
+    Sal de la misma manera ` :qw! `
+    - Nos mandará a otra ventana donde se edita el nombre igual con los mismos comandos "A" para editar. 
+    ![](./Images/reword2.png)
+
+-   Edit (Separar commits)
+    -   Entar al mismo panel anterior `git rebase -i HEAD~4`
+    -   Cambiar de PICK a edit y posterior a eso guardar y salir
+    -   ` git reset HEAD^ ` (Regresar al cambio anterior)
+    -  Hacer los commits por separado con su respectivo nombre
+    -   Para poder continuar (Juntar con la rama main) y salir del rebase interactivo ` git rebase --continue `
